@@ -12,25 +12,25 @@ require "open-uri"
 # require "pry-byebug"
 
 # seed list
-"Destroying all shit...."
-List.destroy_all
-Bookmark.destroy_all
-Movie.destroy_all
-"All shit is destroyed..."
+# "Destroying all shit...."
+# List.destroy_all
+# Bookmark.destroy_all
+# Movie.destroy_all
+# "All shit is destroyed..."
 
-list_url = "https://tmdb.lewagon.com/genre/movie/list"
-list_serialized = URI.open(list_url).read
-lists = JSON.parse(list_serialized)
+# list_url = "https://tmdb.lewagon.com/genre/movie/list"
+# list_serialized = URI.open(list_url).read
+# lists = JSON.parse(list_serialized)
 
-lists["genres"].each do |list|
-  list = List.new(
-    name: list["name"]
-  )
-  list.save
-end
+# lists["genres"].each do |list|
+#   list = List.new(
+#     name: list["name"]
+#   )
+#   list.save
+# end
 
 # seed movies
-for i in 555..1000 do
+for i in 100..540 do
   # sleep(3)
   url = "https://tmdb.lewagon.com/movie/" + i.to_s
   user_serialized = URI.open(url).read
