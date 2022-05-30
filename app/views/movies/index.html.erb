@@ -1,0 +1,18 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+    <div class="container">
+      <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+      <p><span data-controller="typed-js"></span>at one of our campuses around the world.</p>
+    </div>
+  </div>
+
+<div class="cards mx-auto">
+  <% @movies.each do |movie| %>
+    <%= link_to movie do  %>
+      <div class="card-category mt-2 mx-2" style="background-image: url(<%= movie.poster_url %>);text-decoration:none;">
+
+      <%= movie.title %>
+
+      </div>
+    <% end %>
+  <% end %>
+</div>

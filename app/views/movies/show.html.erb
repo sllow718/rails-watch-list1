@@ -1,0 +1,9 @@
+
+  <div class="col-6" style="background-image: url(https://image.tmdb.org/t/p/w500/<%= @movie.poster_url %>);background-size:contain;background-repeat:no-repeat;background-position: center;"></div>
+  <div class="col-6">
+    <h1><%= @movie.title %></h1>
+    <p><%= @movie.overview %></p>
+    <p>Rating: <%= @movie.rating.round(1) %></p>
+  </div>
+
+<a href='/lists/<%=@bookmark.list_id%>'>Back</a>

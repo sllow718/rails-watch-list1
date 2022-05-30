@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="column">
+    <h1><%= @list.name %></h1>
+    <a href="/lists">Back</a>
+  </div>
+</div>
+
+
+<div class="cards mx-auto">
+  <% @bookmarks.each do |bookmark| %>
+    <%= link_to bookmark.movie   do  %>
+      <div class="card-category mt-2 mx-2" style="background-image: url(https://image.tmdb.org/t/p/w500/<%= bookmark.movie.poster_url %>);text-decoration:none;">
+      </div>
+    <% end %>
+  <% end %>
+</div>

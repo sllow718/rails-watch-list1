@@ -10,7 +10,20 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%# banner %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://image.shutterstock.com/image-vector/modern-realistic-3d-cinema-banner-260nw-1470102290.jpg);">
+    <div class="container">
+      <h1>Movie Database</h1>
+      <p><span data-controller="typed-js"></span>the best movies on this planet</p>
+    </div>
+</div>
+  <%# end of banner %>
+
+  <div class="container">
+    <div class="row mx-auto">
+        <body>
+          <%= yield %>
+        </body>
+    </div>
+  </div>
 </html>

@@ -1,0 +1,14 @@
+<div class="cards mx-auto">
+
+  <% @lists.each do |list| %>
+
+    <%= link_to list do  %>
+        <h3 style="text-decoration:none;text-align:center;">
+      <%= list.name %>
+        </h3>
+      <div class="card-category mt-2 mx-2" style="background-image: url(https://image.tmdb.org/t/p/w500/<%=@bookmarks.select{|id| id=list.id}.sample.movie.poster_url %>);text-decoration:none;">
+      </div>
+
+    <% end %>
+  <% end %>
+</div>
