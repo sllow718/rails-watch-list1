@@ -30,7 +30,7 @@ require "open-uri"
 # end
 
 # seed movies
-for i in 100..540 do
+for i in 130..540 do
   # sleep(3)
   url = "https://tmdb.lewagon.com/movie/" + i.to_s
   user_serialized = URI.open(url).read
